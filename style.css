@@ -1,0 +1,207 @@
+/* =====================
+   DESIGN SYSTEM
+===================== */
+:root {
+   --bg: #f4f7fb;
+   --card: #ffffff;
+   --text: #0f172a;
+   --muted: #64748b;
+   --primary: #2563eb;
+   --accent: #22c55e;
+   --radius: 16px;
+   --shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+   --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* =====================
+   RESET
+===================== */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+   background: var(--bg);
+   color: var(--text);
+   line-height: 1.7;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+   padding: 6rem 1.5rem 5rem;
+   background:
+      radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent 40%), radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.15), transparent 40%), linear-gradient(135deg, #0f172a, #020617);
+   color: #fff;
+}
+
+.hero-content {
+   max-width: 900px;
+   margin: auto;
+   display: flex;
+   flex-direction: column; /* ⬅️ kunci: paksa ke bawah */
+   align-items: center;
+   text-align: center;
+   gap: 1.2rem; /* ⬅️ jarak konsisten */
+}
+
+.hero h1 {
+   font-size: clamp(2.2rem, 4vw, 3.2rem);
+   font-weight: 700;
+   letter-spacing: -0.02em;
+   line-height: 1.2;
+}
+
+.tagline {
+   font-size: 1.05rem;
+   color: #c7d2fe;
+}
+
+.desc {
+   max-width: 720px;
+   font-size: 1rem;
+   color: #e5e7eb;
+}
+
+/* =====================
+   SECTION
+===================== */
+.section {
+   max-width: 1200px;
+   margin: auto;
+   padding: 4rem 1.5rem;
+}
+
+.section h2 {
+   font-size: 1.75rem;
+   margin-bottom: 1rem;
+   letter-spacing: -0.01em;
+}
+
+.section p {
+   color: var(--muted);
+}
+
+/* =====================
+   SKILLS
+===================== */
+.skills {
+   margin-top: 1.5rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+   gap: 1rem;
+}
+
+.skills li {
+   list-style: none;
+   background: linear-gradient(135deg, #ffffff, #f8fafc);
+   padding: 1rem 1.2rem;
+   border-radius: var(--radius);
+   box-shadow: var(--shadow-soft);
+   font-weight: 500;
+   transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+}
+
+.skills li:hover {
+   transform: translateY(-4px);
+   box-shadow: var(--shadow);
+}
+
+/* =====================
+   PROJECTS
+===================== */
+.projects {
+   margin-top: 2rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 2rem;
+}
+
+.card {
+   background: var(--card);
+   border-radius: var(--radius);
+   overflow: hidden;
+   box-shadow: var(--shadow-soft);
+   transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+   position: relative;
+}
+
+.card::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(120deg, rgba(37, 99, 235, 0.15), rgba(34, 197, 94, 0.15));
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+   opacity: 1;
+}
+
+.card:hover {
+   transform: translateY(-6px);
+   box-shadow: var(--shadow);
+}
+
+.card img {
+   width: 100%;
+   height: 180px;
+   object-fit: cover;
+}
+
+.card h3 {
+   padding: 1rem 1.2rem 0;
+   font-size: 1.15rem;
+}
+
+.card p {
+   padding: 0.6rem 1.2rem 1.4rem;
+   font-size: 0.95rem;
+   color: var(--muted);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+   padding: 2.5rem 1.5rem;
+   text-align: center;
+   font-size: 0.9rem;
+   color: var(--muted);
+   background: linear-gradient(to top, #e5e7eb, transparent);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+   .hero {
+      padding: 4.5rem 1.2rem 4rem;
+   }
+
+   .hero-content {
+      gap: 1rem;
+   }
+
+   .tagline {
+      font-size: 0.95rem;
+   }
+
+   .desc {
+      font-size: 0.95rem;
+   }
+}
