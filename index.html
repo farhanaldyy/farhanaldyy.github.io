@@ -4,75 +4,346 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Farhan Aldiansyah Poetra | IT Support & Web Dev</title>
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Stylesheet -->
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <!-- HERO -->
+      <!-- Theme Switcher Button -->
+      <button id="theme-toggle" aria-label="Ganti Tema">
+         <i class="fas fa-sun"></i>
+      </button>
+
+      <!-- HERO SECTION -->
       <header class="hero">
-         <div class="hero-content">
-            <h1>Farhan Aldiansyah Poetra</h1>
-            <p class="tagline">IT Support · Server & Network Maintenance · Hardware · Web Development</p>
-            <p class="desc">Profesional IT di lingkungan rumah sakit dengan fokus pada sistem internal, stabilitas layanan, dan digitalisasi proses kerja.</p>
+         <div class="grid-background"></div>
+         <div class="hero-container">
+            <div class="hero-text fade-in">
+               <span class="badge">IT Specialist</span>
+               <h1>Farhan Aldiansyah Poetra</h1>
+               <p class="tagline">IT Support · Server & Network · Web Development</p>
+               <p class="desc">Profesional IT di lingkungan rumah sakit dengan fokus pada stabilitas sistem internal, pemeliharaan server, keamanan jaringan, dan digitalisasi proses kerja medis maupun administrasi.</p>
+               <div class="hero-actions">
+                  <a href="#projects" class="btn btn-primary">Lihat Project <i class="fas fa-arrow-right"></i></a>
+                  <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+               </div>
+            </div>
+
+            <!-- Interactive Terminal Widget -->
+            <div class="hero-terminal fade-in">
+               <div class="terminal-header">
+                  <div class="terminal-dots">
+                     <span class="dot dot-red"></span>
+                     <span class="dot dot-yellow"></span>
+                     <span class="dot dot-green"></span>
+                  </div>
+                  <span class="terminal-title">farhan@hospital-it:~</span>
+               </div>
+               <div class="terminal-body" id="terminal-body-container">
+                  <div id="terminal-results"></div>
+                  <div class="terminal-input-line">
+                     <span class="terminal-prompt">guest@farhan-portfolio:~$</span>
+                     <input type="text" id="terminal-input-field" autocomplete="off" placeholder="type 'help'..." autofocus />
+                  </div>
+               </div>
+            </div>
          </div>
       </header>
 
-      <!-- ABOUT -->
-      <section class="section">
-         <h2>Tentang Saya</h2>
-         <p>
-            Berpengalaman menangani sistem IT rumah sakit, mulai dari troubleshooting harian, maintenance server & jaringan, hingga pengembangan web application internal. Terbiasa bekerja dengan sistem kritikal
-            yang menuntut stabilitas, keamanan, dan response time yang cepat.
-         </p>
+      <!-- METRICS & ABOUT SECTION -->
+      <section class="section container-flex">
+         <div class="about-grid">
+            <div class="about-left fade-in">
+               <h2 class="section-title">Tentang Saya</h2>
+               <p class="about-desc">
+                  Berpengalaman menangani infrastruktur IT rumah sakit, mulai dari troubleshooting harian user, pemeliharaan server & jaringan kritikal, hingga pengembangan aplikasi web internal. Terbiasa bekerja di bawah standar keamanan tinggi dan response time cepat yang menjadi kunci layanan kesehatan berbasis digital.
+               </p>
 
-         <ul class="skills">
-            <li>IT Support</li>
-            <li>Maintenance Server (Linux / Windows)</li>
-            <li>Maintenance Network (LAN / WAN)</li>
-            <li>Maintenance Hardware</li>
-            <li>Web Development (HTML, CSS, JS, PHP)</li>
-            <li>Internal System & Reporting</li>
-            <li>Helpdesk Sistem Manajeman Rumah Sakit (SIMRS)</li>
-         </ul>
+               <!-- Stats Counters -->
+               <div class="stats-container">
+                  <div class="stat-card">
+                     <div class="stat-number" data-target="99.9" data-suffix="%">0%</div>
+                     <div class="stat-label">Server Uptime</div>
+                  </div>
+                  <div class="stat-card">
+                     <div class="stat-number" data-target="3" data-suffix="+">0</div>
+                     <div class="stat-label">Tahun Pengalaman</div>
+                  </div>
+                  <div class="stat-card">
+                     <div class="stat-number" data-target="5" data-suffix="+">0</div>
+                     <div class="stat-label">Sistem Internal Built</div>
+                  </div>
+                  <div class="stat-card">
+                     <div class="stat-number" data-target="100" data-suffix="+">0</div>
+                     <div class="stat-label">Perangkat Maintained</div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Interactive Skill Groups -->
+            <div class="about-right fade-in">
+               <h2 class="section-title">Keahlian Utama</h2>
+               <div class="skills-grid">
+                  <div class="skill-category-card">
+                     <div class="skill-header">
+                        <i class="fas fa-server text-primary"></i>
+                        <h3>Server & OS</h3>
+                     </div>
+                     <ul class="skill-list">
+                        <li>Maintenance Server (Linux / Win)</li>
+                        <li>Active Directory & User Access</li>
+                        <li>Database Backup & Recovery</li>
+                     </ul>
+                  </div>
+
+                  <div class="skill-category-card">
+                     <div class="skill-header">
+                        <i class="fas fa-network-wired text-primary"></i>
+                        <h3>Jaringan & Hardware</h3>
+                     </div>
+                     <ul class="skill-list">
+                        <li>LAN/WAN Jaringan Rumah Sakit</li>
+                        <li>Mikrotik & Firewall Config</li>
+                        <li>Troubleshooting Hardware & PC</li>
+                     </ul>
+                  </div>
+
+                  <div class="skill-category-card">
+                     <div class="skill-header">
+                        <i class="fas fa-code text-primary"></i>
+                        <h3>Web Development</h3>
+                     </div>
+                     <ul class="skill-list">
+                        <li>HTML5, CSS3, & JavaScript (ES6)</li>
+                        <li>Backend Dev (PHP, Laravel, Node.js)</li>
+                        <li>Database (MySQL, PostgreSQL)</li>
+                     </ul>
+                  </div>
+
+                  <div class="skill-category-card">
+                     <div class="skill-header">
+                        <i class="fas fa-hospital-user text-primary"></i>
+                        <h3>SIMRS & IT Support</h3>
+                     </div>
+                     <ul class="skill-list">
+                        <li>Helpdesk SIMRS & Integrasi BPJS</li>
+                        <li>Sistem Pelaporan Internal</li>
+                        <li>Response Time Cepat & SLA</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
 
-      <!-- PROJECTS -->
-      <section class="section">
-         <h2>Project & Sistem</h2>
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="section bg-light-gradient">
+         <div class="section-header text-center fade-in">
+            <span class="badge">Portofolio Pekerjaan</span>
+            <h2 class="section-title">Project & Sistem Kustom</h2>
+            <p class="section-subtitle">Sistem web internal dan publik yang dibangun untuk mengotomatisasi proses kerja dan memelihara stabilitas operasional.</p>
+         </div>
 
-         <div class="projects">
-            <article class="card">
-               <img src="assets/pr-1.png" alt="Sistem Pelaporan IT" />
-               <h3>Sistem Pelaporan Internal IT</h3>
-               <p>Web app internal untuk pencatatan laporan harian IT, lemburan, maintenance server, backup database, dan monitoring aktivitas teknis.</p>
+         <div class="projects-grid fade-in">
+            <article class="card" data-project-id="it-reporting">
+               <div class="card-img-wrapper">
+                  <img src="assets/pr-1.png" alt="Sistem Pelaporan IT" />
+                  <div class="card-overlay">
+                     <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
+                  </div>
+               </div>
+               <div class="card-content">
+                  <div class="card-meta">
+                     <span class="project-tag">Internal Web App</span>
+                  </div>
+                  <h3>Sistem Pelaporan Internal IT</h3>
+                  <p>Web app internal untuk pencatatan laporan harian IT, lemburan, maintenance server, backup database, dan monitoring aktivitas teknis.</p>
+                  <div class="card-tech">
+                     <span>PHP</span>
+                     <span>MySQL</span>
+                     <span>JS</span>
+                  </div>
+               </div>
             </article>
 
-            <article class="card">
-               <img src="assets/pr-2.png" alt="Website Rumah Sakit" />
-               <h3>Website Rumah Sakit</h3>
-               <p>Website resmi rumah sakit sebagai media informasi publik: profil, layanan, jadwal dokter, berita, dan kontak.</p>
+            <article class="card" data-project-id="hospital-web">
+               <div class="card-img-wrapper">
+                  <img src="assets/pr-2.png" alt="Website Rumah Sakit" />
+                  <div class="card-overlay">
+                     <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
+                  </div>
+               </div>
+               <div class="card-content">
+                  <div class="card-meta">
+                     <span class="project-tag">Public Website</span>
+                  </div>
+                  <h3>Website Resmi Rumah Sakit</h3>
+                  <p>Website resmi rumah sakit sebagai media informasi publik: profil, layanan, jadwal dokter, berita, dan kontak.</p>
+                  <div class="card-tech">
+                     <span>Bootstrap</span>
+                     <span>PHP</span>
+                     <span>PostgreSQL</span>
+                  </div>
+               </div>
             </article>
 
-            <article class="card">
-               <img src="assets/pr-3.png" alt="Web App Data Website" />
-               <h3>Web App Manajemen Data Website</h3>
-               <p>Dashboard admin untuk mengelola konten website rumah sakit, statistik pengunjung, pesan user, dan file unduhan.</p>
+            <article class="card" data-project-id="web-cms">
+               <div class="card-img-wrapper">
+                  <img src="assets/pr-3.png" alt="Web App Data Website" />
+                  <div class="card-overlay">
+                     <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
+                  </div>
+               </div>
+               <div class="card-content">
+                  <div class="card-meta">
+                     <span class="project-tag">Dashboard / CMS</span>
+                  </div>
+                  <h3>Web App Manajemen Data Website</h3>
+                  <p>Dashboard admin untuk mengelola konten website rumah sakit, statistik pengunjung, pesan user, dan file unduhan.</p>
+                  <div class="card-tech">
+                     <span>PHP</span>
+                     <span>MariaDB</span>
+                     <span>Chart.js</span>
+                  </div>
+               </div>
             </article>
 
-            <article class="card">
-               <img src="assets/pr-4.png" alt="Sistem Penilaian Tenaga Medis" />
-               <h3>Sistem Penilaian & Pelaporan Tenaga Medis</h3>
-               <p>Sistem internal untuk penilaian kinerja dan index performance tenaga medis secara bulanan dan tahunan.</p>
+            <article class="card" data-project-id="medical-kpi">
+               <div class="card-img-wrapper">
+                  <img src="assets/pr-4.png" alt="Sistem Penilaian Tenaga Medis" />
+                  <div class="card-overlay">
+                     <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
+                  </div>
+               </div>
+               <div class="card-content">
+                  <div class="card-meta">
+                     <span class="project-tag">Evaluation Tool</span>
+                  </div>
+                  <h3>Sistem Penilaian & Pelaporan Tenaga Medis</h3>
+                  <p>Sistem internal untuk penilaian kinerja dan index performance tenaga medis secara bulanan dan tahunan.</p>
+                  <div class="card-tech">
+                     <span>Laravel</span>
+                     <span>MariaDB</span>
+                     <span>JS</span>
+                  </div>
+               </div>
+            </article>
+
+            <article class="card featured" data-project-id="hospital-quality-system">
+               <div class="card-img-wrapper">
+                  <img src="assets/pr-5.png" alt="Sistem Monitoring Mutu Rumah Sakit" />
+                  <div class="card-overlay">
+                     <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
+                  </div>
+               </div>
+               <div class="card-content">
+                  <div class="card-meta">
+                     <span class="project-tag">Hospital Quality System</span>
+                  </div>
+                  <h3>Sistem Monitoring Mutu Rumah Sakit</h3>
+                  <p>Sistem aplikasi internal untuk pemantauan, pengukuran, dan analisis Indikator Mutu Nasional (IMN) serta keselamatan pasien secara real-time guna mendukung akreditasi rumah sakit.</p>
+                  <div class="card-tech">
+                     <span>Node.js</span>
+                     <span>Express</span>
+                     <span>Prisma</span>
+                     <span>MariaDB</span>
+                     <span>JWT</span>
+                  </div>
+               </div>
             </article>
          </div>
       </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section contact-section">
+         <div class="contact-card fade-in">
+            <div class="contact-header text-center">
+               <span class="badge">Hubungi Saya</span>
+               <h2 class="section-title">Mari Berdiskusi</h2>
+               <p class="section-subtitle">Tertarik membangun sistem kustom atau butuh tenaga ahli IT untuk infrastruktur Anda? Hubungi kontak di bawah ini.</p>
+            </div>
+            
+            <div class="contact-content">
+               <div class="email-box">
+                  <i class="far fa-envelope"></i>
+                  <span class="email-text">farhanpoetra011@gmail.com</span>
+                  <button id="copy-email-btn" aria-label="Copy Email">
+                     <i class="far fa-copy"></i>
+                     <span class="tooltip">Tersalin!</span>
+                  </button>
+               </div>
+
+               <div class="social-links">
+                  <a href="https://wa.me/628123456789" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp Farhan">
+                     <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                  <a href="https://github.com/farhanaldyy" target="_blank" class="social-btn github" aria-label="GitHub Farhan">
+                     <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/farhan-aldiansyah-31b265220/" target="_blank" class="social-btn linkedin" aria-label="LinkedIn Farhan">
+                     <i class="fab fa-linkedin-in"></i> LinkedIn
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- DETAILED PROJECT MODAL -->
+      <div id="project-modal" class="modal-overlay">
+         <div class="modal-content">
+            <button class="modal-close" aria-label="Tutup Modal">
+               <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+               <span class="badge">Detail Project</span>
+               <h2 id="modal-title">Judul Project</h2>
+            </div>
+            <div class="modal-body">
+               <div class="modal-grid">
+                  <div class="modal-left">
+                     <div class="modal-section">
+                        <h4><i class="fas fa-info-circle text-primary"></i> Deskripsi Sistem</h4>
+                        <p id="modal-desc">Deskripsi sistem...</p>
+                     </div>
+                     <div class="modal-section">
+                        <h4><i class="fas fa-list-check text-primary"></i> Fitur & Modul Utama</h4>
+                        <ul id="modal-features-list" class="features-list">
+                           <!-- JS will populate this -->
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="modal-right">
+                     <div class="modal-section highlight-box">
+                        <h4><i class="fas fa-chart-line text-accent"></i> Dampak & Efisiensi RS</h4>
+                        <p id="modal-impact-desc">Dampak bagi rumah sakit...</p>
+                     </div>
+                     <div class="modal-section">
+                        <h4><i class="fas fa-laptop-code text-primary"></i> Teknologi Stack</h4>
+                        <div id="modal-tech-tags" class="tech-tags">
+                           <!-- JS will populate this -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
       <!-- FOOTER -->
       <footer>
          <p>
-            © 2025 · Farhan Aldiansyah Poetra
+            © 2026 · Farhan Aldiansyah Poetra.
             <br />
-            IT Support & Web Development – Hospital Environment
+            <span>IT Support & Web Development</span>
          </p>
       </footer>
+
+      <!-- JavaScript -->
+      <script src="script.js"></script>
    </body>
 </html>
