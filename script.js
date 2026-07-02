@@ -252,8 +252,8 @@ function initTerminal() {
 
    // Sambutan terminal
    const welcomeText = `
-Farhan Terminal v1.2.0 (Type 'help' to list available commands)
-System status: ONLINE | SIMRS connection: STABLE
+Farhan Terminal v1.2.0 (Type: 'help' to list available commands)
+System status: ONLINE | Connection: STABLE
 `;
    printToTerminal(welcomeText, "sys-msg");
 
@@ -263,7 +263,7 @@ System status: ONLINE | SIMRS connection: STABLE
          terminalInput.value = "";
          
          // Tampilkan kembali baris perintah
-         printToTerminal(`guest@farhan-portfolio:~$ ${command}`, "user-cmd");
+         printToTerminal(`guest@portfolio:~$ ${command}`, "user-cmd");
          
          if (command) {
             handleCommand(command);
