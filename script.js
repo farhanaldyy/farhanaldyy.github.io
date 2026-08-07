@@ -56,25 +56,27 @@ const projectsData = {
    },
    "hospital-quality-system": {
       title: "Sistem Monitoring Mutu Rumah Sakit",
-      desc: "Sistem aplikasi internal terpadu yang dirancang untuk pemantauan, pengukuran, dan analisis 82+ Indikator Mutu Nasional (IMN), Indikator Mutu Prioritas RS (IMPRS), serta Keselamatan Pasien secara terintegrasi dan real-time guna mendukung proses akreditasi rumah sakit.",
-      tech: ["Node.js", "Express.js", "Prisma ORM", "MariaDB", "JavaScript (ES6+)", "JWT Auth", "ExcelJS"],
+      desc: "Sistem aplikasi internal komprehensif yang dirancang khusus untuk mempermudah pemantauan, pengukuran, dan analisis 82+ Indikator Mutu Nasional (IMN), Indikator Mutu Prioritas Rumah Sakit (IMPRS), serta Insiden Keselamatan Pasien (IKP) secara terintegrasi dan real-time per unit/ruangan guna mendukung proses akreditasi dan evaluasi mutu rumah sakit.",
+      tech: ["Node.js", "Express.js", "Prisma ORM", "MariaDB", "JavaScript", "JWT", "ExcelJS"],
       features: [
-         "Kelola Profil & Branding RS: Pengaturan logo visual, identitas fasyankes, kode RS, dan profil utama rumah sakit.",
-         "Manajemen 82+ Indikator Mutu Unit: Konfigurasi dinamis indikator aktif per unit/ruangan (IGD, ICU, Ranap, Farmasi, Lab, SIMRS) lengkap dengan target standar acuan.",
-         "Filtering & Pencarian Indikator Interaktif: Pencarian ID/nama indikator, quick filter status (Aktif/Non-Aktif), serta aksi kolektif (Pilih/Matikan Semua).",
-         "Perhitungan Kepatuhan Mutu Otomatis: Rekapitulasi nilai pembilang (N), penyebut (D), dan persentase capaian (C) real-time berbasis periode bulanan.",
-         "Import Data Massal & Audit Trail: Pengunggahan batch data mutu berbasis validasi templat Excel dan pengawasan riwayat aktivitas pengguna.",
-         "Hak Akses Berjenjang (RBAC): Modul Admin untuk Kelola User, Kelola Unit, Kelola Periode, dan otorisasi komite mutu."
+         "Manajemen Profil & Identitas Visual RS (Kode Fasyankes, Logo, & Data Wilayah)",
+         "Kelola & Pengaturan 82+ Indikator Mutu Unit (Filter Per Unit/Ruangan & Status Aktif/Non-Aktif)",
+         "Pencatatan & Validasi Data Indikator Mutu Real-Time dengan Target Standard (IMN, IMPRS, IKP)",
+         "Perhitungan Kepatuhan Mutu (Compliance Rate) & Rekapitulasi Otomatis Berbasis Periode (Bulan/Tahun)",
+         "Import Data Massal via Excel dengan Validasi Skema Template & Normalisasi Tipe Data",
+         "Sistem Otorisasi Hak Akses (Role-Based Access Control) & Log Audit Trail Keamanan"
       ],
-      impact: "Mendigitalisasi pelaporan mutu rumah sakit (paperless), memotong waktu audit laporan bulanan dari 5 hari kerja menjadi hitungan detik, serta menjamin kesiapan data akreditasi nasional 100% akurat dan real-time.",
-      images: [
+      impact: "Mendigitalisasi pelaporan indikator mutu secara terpusat (paperless), memotong waktu audit laporan bulanan dari 5 hari menjadi instan, serta memastikan kesiapan data akreditasi nasional 100% real-time.",
+      gallery: [
          {
-            url: "assets/mutu-profil.png",
-            caption: "Modul Kelola Informasi & Profil Utama RS"
+            src: "assets/mutu-profil.png",
+            title: "Kelola Informasi & Profil Rumah Sakit",
+            caption: "Modul pengaturan profil utama RS (Kode Fasyankes, Identitas Visual, Logo), manajemen periode, hak akses user, import data massal Excel, dan log Audit Trail."
          },
          {
-            url: "assets/mutu-indikator.png",
-            caption: "Modul Kelola 82+ Indikator Mutu Unit"
+            src: "assets/mutu-indikator.png",
+            title: "Kelola & Konfigurasi Indikator Mutu Unit",
+            caption: "Interface pengaturan 82+ indikator mutu per unit/ruangan (seperti Unit Khusus ANNISA, Farmasi, SIMRS, IGD, ICU) lengkap dengan pencarian, filter status aktif, dan standar kepatuhan."
          }
       ]
    }
@@ -206,6 +208,42 @@ function initProjectModal() {
             document.getElementById("modal-desc").innerText = data.desc;
             document.getElementById("modal-impact-desc").innerText = data.impact;
             
+            // Generate gallery images jika ada
+            const galleryContainer = document.getElementById("modal-gallery");
+            if (galleryContainer) {
+               galleryContainer.innerHTML = "";
+               if (data.gallery && data.gallery.length > 0) {
+                  galleryContainer.style.display = "block";
+                  
+                  const galleryHeader = document.createElement("div");
+                  galleryHeader.className = "modal-gallery-title";
+                  galleryHeader.innerHTML = `<i class="fas fa-images text-primary"></i> Preview Sistem & Interface`;
+                  galleryContainer.appendChild(galleryHeader);
+
+                  const galleryGrid = document.createElement("div");
+                  galleryGrid.className = "modal-gallery-grid";
+                  
+                  data.gallery.forEach(imgData => {
+                     const item = document.createElement("div");
+                     item.className = "gallery-item";
+                     item.innerHTML = `
+                        <div class="gallery-img-wrapper" onclick="window.open('${imgData.src}', '_blank')" title="Klik untuk membuka gambar di tab baru">
+                           <img src="${imgData.src}" alt="${imgData.title}" />
+                           <span class="gallery-zoom-badge"><i class="fas fa-search-plus"></i> Perbesar</span>
+                        </div>
+                        <div class="gallery-info">
+                           <h5>${imgData.title}</h5>
+                           <p>${imgData.caption}</p>
+                        </div>
+                     `;
+                     galleryGrid.appendChild(item);
+                  });
+                  galleryContainer.appendChild(galleryGrid);
+               } else {
+                  galleryContainer.style.display = "none";
+               }
+            }
+
             // Generate list features
             const featuresContainer = document.getElementById("modal-features-list");
             featuresContainer.innerHTML = "";
@@ -224,27 +262,6 @@ function initProjectModal() {
                span.innerText = t;
                techContainer.appendChild(span);
             });
-
-            // Generate gallery screenshot jika tersedia
-            const galleryWrapper = document.getElementById("modal-gallery-wrapper");
-            const galleryContainer = document.getElementById("modal-gallery");
-            if (data.images && data.images.length > 0) {
-               galleryContainer.innerHTML = "";
-               data.images.forEach(img => {
-                  const item = document.createElement("div");
-                  item.className = "modal-gallery-item";
-                  item.innerHTML = `
-                     <a href="${img.url}" target="_blank" title="Klik untuk membuka ukuran penuh">
-                        <img src="${img.url}" alt="${img.caption}" />
-                     </a>
-                     <span class="gallery-caption">${img.caption}</span>
-                  `;
-                  galleryContainer.appendChild(item);
-               });
-               galleryWrapper.style.display = "block";
-            } else {
-               galleryWrapper.style.display = "none";
-            }
 
             // Tampilkan modal
             modal.classList.add("active");
