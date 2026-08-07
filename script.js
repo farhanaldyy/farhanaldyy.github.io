@@ -56,16 +56,27 @@ const projectsData = {
    },
    "hospital-quality-system": {
       title: "Sistem Monitoring Mutu Rumah Sakit",
-      desc: "Sistem aplikasi internal yang dirancang khusus untuk mempermudah pemantauan, pengukuran, dan analisis Indikator Mutu Nasional (IMN), Indikator Mutu Prioritas Rumah Sakit (IMPRS), serta Insiden Keselamatan Pasien (IKP) secara terintegrasi dan real-time guna mendukung proses akreditasi rumah sakit.",
-      tech: ["JavaScript", "Node.js", "Express.js", "Prisma", "MariaDB", "JWT"],
+      desc: "Sistem aplikasi internal terpadu yang dirancang untuk pemantauan, pengukuran, dan analisis 82+ Indikator Mutu Nasional (IMN), Indikator Mutu Prioritas RS (IMPRS), serta Keselamatan Pasien secara terintegrasi dan real-time guna mendukung proses akreditasi rumah sakit.",
+      tech: ["Node.js", "Express.js", "Prisma ORM", "MariaDB", "JavaScript (ES6+)", "JWT Auth", "ExcelJS"],
       features: [
-         "Pencatatan & Validasi Data Indikator Mutu (IMN/IMPRS) Real-Time",
-         "Perhitungan Kepatuhan Mutu (Compliance Rate) Otomatis Berbasis Periode",
-         "Pelaporan Insiden Keselamatan Pasien (IKP) dengan Alur Investigasi Komite Mutu",
-         "Pemetaan Database Handal via Prisma ORM & MariaDB",
-         "Autentikasi JWT & Otorisasi Hak Akses (Validator, Kepala Unit, Komite Mutu)"
+         "Kelola Profil & Branding RS: Pengaturan logo visual, identitas fasyankes, kode RS, dan profil utama rumah sakit.",
+         "Manajemen 82+ Indikator Mutu Unit: Konfigurasi dinamis indikator aktif per unit/ruangan (IGD, ICU, Ranap, Farmasi, Lab, SIMRS) lengkap dengan target standar acuan.",
+         "Filtering & Pencarian Indikator Interaktif: Pencarian ID/nama indikator, quick filter status (Aktif/Non-Aktif), serta aksi kolektif (Pilih/Matikan Semua).",
+         "Perhitungan Kepatuhan Mutu Otomatis: Rekapitulasi nilai pembilang (N), penyebut (D), dan persentase capaian (C) real-time berbasis periode bulanan.",
+         "Import Data Massal & Audit Trail: Pengunggahan batch data mutu berbasis validasi templat Excel dan pengawasan riwayat aktivitas pengguna.",
+         "Hak Akses Berjenjang (RBAC): Modul Admin untuk Kelola User, Kelola Unit, Kelola Periode, dan otorisasi komite mutu."
       ],
-      impact: "Mendigitalisasi pelaporan indikator mutu secara terpusat (paperless), memotong waktu audit laporan bulanan dari 5 hari menjadi instan, serta memastikan kesiapan data akreditasi nasional 100% real-time."
+      impact: "Mendigitalisasi pelaporan mutu rumah sakit (paperless), memotong waktu audit laporan bulanan dari 5 hari kerja menjadi hitungan detik, serta menjamin kesiapan data akreditasi nasional 100% akurat dan real-time.",
+      images: [
+         {
+            url: "assets/mutu-profil.png",
+            caption: "Modul Kelola Informasi & Profil Utama RS"
+         },
+         {
+            url: "assets/mutu-indikator.png",
+            caption: "Modul Kelola 82+ Indikator Mutu Unit"
+         }
+      ]
    }
 };
 
@@ -213,6 +224,27 @@ function initProjectModal() {
                span.innerText = t;
                techContainer.appendChild(span);
             });
+
+            // Generate gallery screenshot jika tersedia
+            const galleryWrapper = document.getElementById("modal-gallery-wrapper");
+            const galleryContainer = document.getElementById("modal-gallery");
+            if (data.images && data.images.length > 0) {
+               galleryContainer.innerHTML = "";
+               data.images.forEach(img => {
+                  const item = document.createElement("div");
+                  item.className = "modal-gallery-item";
+                  item.innerHTML = `
+                     <a href="${img.url}" target="_blank" title="Klik untuk membuka ukuran penuh">
+                        <img src="${img.url}" alt="${img.caption}" />
+                     </a>
+                     <span class="gallery-caption">${img.caption}</span>
+                  `;
+                  galleryContainer.appendChild(item);
+               });
+               galleryWrapper.style.display = "block";
+            } else {
+               galleryWrapper.style.display = "none";
+            }
 
             // Tampilkan modal
             modal.classList.add("active");
