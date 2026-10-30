@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c101c"/>
+      <stop offset="100%" stop-color="#141a29"/>
+    </linearGradient>
+    <linearGradient id="chart-grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="chart-grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" fill="url(#bg-grad)"/>
+
+  <!-- Grid overlay -->
+  <g stroke="#334155" stroke-opacity="0.2" stroke-width="1">
+    <line x1="0" y1="60" x2="800" y2="60"/>
+    <line x1="0" y1="140" x2="800" y2="140"/>
+    <line x1="0" y1="220" x2="800" y2="220"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="380" x2="800" y2="380"/>
+    <line x1="160" y1="0" x2="160" y2="460"/>
+    <line x1="320" y1="0" x2="320" y2="460"/>
+    <line x1="480" y1="0" x2="480" y2="460"/>
+    <line x1="640" y1="0" x2="640" y2="460"/>
+  </g>
+
+  <!-- Top bar -->
+  <rect x="25" y="20" width="750" height="44" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <circle cx="45" cy="42" r="6" fill="#ef4444"/>
+  <circle cx="63" cy="42" r="6" fill="#eab308"/>
+  <circle cx="81" cy="42" r="6" fill="#22c55e"/>
+  <text x="110" y="47" fill="#94a3b8" font-family="'Plus Jakarta Sans', monospace, sans-serif" font-size="13" font-weight="600">Grafana + Prometheus Server Infrastructure Dashboard</text>
+  <rect x="635" y="28" width="125" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+  <circle cx="648" cy="41" r="4" fill="#10b981"/>
+  <text x="658" y="46" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="700">SYSTEM HEALTHY</text>
+
+  <!-- Metric Widget 1: CPU Load -->
+  <rect x="25" y="78" width="236" height="90" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1"/>
+  <text x="40" y="103" fill="#94a3b8" font-family="sans-serif" font-size="12">Server SIMRS Linux CPU</text>
+  <text x="40" y="142" fill="#f8fafc" font-family="sans-serif" font-size="28" font-weight="800">28.4%</text>
+  <text x="145" y="140" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">▲ Normal load</text>
+
+  <!-- Metric Widget 2: RAM Usage -->
+  <rect x="282" y="78" width="236" height="90" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1"/>
+  <text x="297" y="103" fill="#94a3b8" font-family="sans-serif" font-size="12">Memory Used (RAM)</text>
+  <text x="297" y="142" fill="#f8fafc" font-family="sans-serif" font-size="28" font-weight="800">14.2 GB</text>
+  <text x="418" y="140" fill="#94a3b8" font-family="sans-serif" font-size="12">/ 32 GB</text>
+
+  <!-- Metric Widget 3: Uptime -->
+  <rect x="539" y="78" width="236" height="90" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1"/>
+  <text x="554" y="103" fill="#94a3b8" font-family="sans-serif" font-size="12">Node Availability / SLA</text>
+  <text x="554" y="142" fill="#38bdf8" font-family="sans-serif" font-size="28" font-weight="800">99.98%</text>
+  <text x="675" y="140" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">● 100% OK</text>
+
+  <!-- Graph 1: CPU & Memory Graph Area -->
+  <rect x="25" y="180" width="493" height="185" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1"/>
+  <text x="40" y="206" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="700">Cluster Workload Trend (node_exporter)</text>
+  <path d="M 40 330 Q 120 270 200 290 T 360 250 T 500 275 L 500 345 L 40 345 Z" fill="url(#chart-grad2)"/>
+  <path d="M 40 330 Q 120 270 200 290 T 360 250 T 500 275" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <path d="M 40 310 Q 140 230 220 250 T 380 210 T 500 230 L 500 345 L 40 345 Z" fill="url(#chart-grad1)"/>
+  <path d="M 40 310 Q 140 230 220 250 T 380 210 T 500 230" fill="none" stroke="#f97316" stroke-width="2.5"/>
+
+  <!-- Telegram Alert Card Overlay -->
+  <rect x="539" y="180" width="236" height="255" rx="8" fill="url(#card-grad)" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="554" y="195" width="206" height="30" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+  <circle cx="568" cy="210" r="5" fill="#38bdf8"/>
+  <text x="580" y="214" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="700">Telegram Bot Alert</text>
+  
+  <!-- Alert Message 1 -->
+  <rect x="554" y="235" width="206" height="85" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="564" y="254" fill="#22c55e" font-family="sans-serif" font-size="11" font-weight="700">[RESOLVED] Host Alert</text>
+  <text x="564" y="272" fill="#cbd5e1" font-family="sans-serif" font-size="10">Server: SIMRS Database Node</text>
+  <text x="564" y="288" fill="#94a3b8" font-family="sans-serif" font-size="10">Uptime: Restored (0s downtime)</text>
+  <text x="564" y="304" fill="#64748b" font-family="sans-serif" font-size="9">Alertmanager via Telegram Bot</text>
+
+  <!-- Alert Message 2 -->
+  <rect x="554" y="330" width="206" height="85" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="564" y="349" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="700">[INFO] Daily Backup OK</text>
+  <text x="564" y="367" fill="#cbd5e1" font-family="sans-serif" font-size="10">Backup DB RS: Completed 4.2GB</text>
+  <text x="564" y="383" fill="#94a3b8" font-family="sans-serif" font-size="10">Integrity Check: PASSED 100%</text>
+  <text x="564" y="399" fill="#64748b" font-family="sans-serif" font-size="9">Automated Backup Notification</text>
+
+  <!-- Bottom status pill -->
+  <rect x="25" y="377" width="493" height="58" rx="8" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1"/>
+  <circle cx="45" cy="406" r="5" fill="#22c55e"/>
+  <text x="60" y="401" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="600">Prometheus Exporters Active</text>
+  <text x="60" y="418" fill="#94a3b8" font-family="sans-serif" font-size="11">node_exporter (Linux) · windows_exporter · Alert Rules: CPU, Disk, RAM, DB Service</text>
+</svg>

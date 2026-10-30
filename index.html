@@ -3,33 +3,89 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Farhan Aldiansyah Poetra | IT Support & Web Dev</title>
+      <title>Farhan Aldiansyah Poetra | IT Staff & Web Developer</title>
+      
+      <!-- Primary Meta Tags -->
+      <meta name="title" content="Farhan Aldiansyah Poetra | IT Staff & Web Developer" />
+      <meta name="description" content="Portofolio Farhan Aldiansyah Poetra - IT Staff berpengalaman di lingkungan rumah sakit. Spesialisasi pemeliharaan SIMRS 24 jam, monitoring server Grafana & Prometheus, infrastruktur jaringan Mikrotik, serta pengembangan aplikasi web medis dan pelaporan internal." />
+      <meta name="keywords" content="Farhan Aldiansyah Poetra, IT Staff, IT Support, SIMRS, Grafana, Prometheus, Telegram Alert, Mikrotik, Web Developer, Karawang, Rumah Sakit Islam Karawang, PHP, Laravel, Node.js" />
+      <meta name="author" content="Farhan Aldiansyah Poetra" />
+
+      <!-- Open Graph / Facebook / WhatsApp -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://farhanaldyy.github.io/" />
+      <meta property="og:title" content="Farhan Aldiansyah Poetra | IT Staff & Web Developer" />
+      <meta property="og:description" content="IT Staff Rumah Sakit berpengalaman 3+ tahun dalam SIMRS 24 jam, pemantauan server Grafana & Prometheus, serta pengembangan aplikasi web sistem informasi medis." />
+      <meta property="og:image" content="assets/pr-monitoring.svg" />
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
       <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+      
       <!-- Font Awesome Icons -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
       <!-- Stylesheet -->
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <!-- Theme Switcher Button -->
-      <button id="theme-toggle" aria-label="Ganti Tema">
-         <i class="fas fa-sun"></i>
-      </button>
+      <!-- NAVIGATION BAR -->
+      <nav class="navbar" id="navbar">
+         <div class="nav-container">
+            <a href="#" class="nav-brand">
+               <span class="brand-code">&lt;</span>Farhan<span class="brand-accent">.dev</span><span class="brand-code">/&gt;</span>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+               <a href="#about" class="nav-link">Tentang</a>
+               <a href="#experience" class="nav-link">Pengalaman</a>
+               <a href="#skills" class="nav-link">Keahlian</a>
+               <a href="#projects" class="nav-link">Proyek</a>
+               <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+
+            <div class="nav-actions">
+               <a href="assets/Farhan_Aldiansyah_Poetra_CV.pdf" target="_blank" download="Farhan_Aldiansyah_Poetra_CV.pdf" class="btn-cv-nav" title="Unduh Curriculum Vitae">
+                  <i class="fas fa-file-pdf"></i> <span>Unduh CV</span>
+               </a>
+               <!-- Style Switcher (Modern / Neo-Brutalism) right beside theme switcher -->
+               <button id="style-toggle" aria-label="Ganti Style (Modern / Neo-Brutalis)" title="Switch Style: Modern ⇋ Neo-Brutalism">
+                  <i class="fas fa-cubes"></i>
+               </button>
+               <button id="theme-toggle" aria-label="Ganti Tema">
+                  <i class="fas fa-sun"></i>
+               </button>
+               <button class="nav-toggle" id="nav-toggle" aria-label="Buka Menu Navigasi">
+                  <i class="fas fa-bars"></i>
+               </button>
+            </div>
+         </div>
+      </nav>
 
       <!-- HERO SECTION -->
-      <header class="hero">
+      <header class="hero" id="home">
          <div class="grid-background"></div>
          <div class="hero-container">
             <div class="hero-text fade-in">
-               <span class="badge">IT Specialist</span>
+               <div class="hero-status">
+                  <span class="status-pulse"></span>
+                  <span>IT Staff · IT Support</span>
+               </div>
+               <span class="badge">IT Specialist & Web Developer</span>
                <h1>Farhan Aldiansyah Poetra</h1>
-               <p class="tagline">IT Support · Server & Network · Web Development</p>
-               <p class="desc">Profesional IT di lingkungan rumah sakit dengan fokus pada stabilitas sistem internal, pemeliharaan server, keamanan jaringan, dan digitalisasi proses kerja medis maupun administrasi.</p>
+               <p class="tagline">IT Support · SIMRS & Network · Server Monitoring · Web Development</p>
+               <p class="desc">
+                  Lulusan S1 Teknik Informatika (IPK 3.62 / <em>Dengan Pujian</em>) dengan pengalaman lebih dari 3 tahun sebagai IT Staff di lingkungan rumah sakit. Fokus pada pemeliharaan SIMRS 24 jam, stabilitas server & jaringan, monitoring infrastruktur real-time (Grafana & Prometheus), serta digitalisasi sistem internal medis maupun administratif.
+               </p>
                <div class="hero-actions">
                   <a href="#projects" class="btn btn-primary">Lihat Project <i class="fas fa-arrow-right"></i></a>
+                  <a href="assets/Farhan_Aldiansyah_Poetra_CV.pdf" target="_blank" download="Farhan_Aldiansyah_Poetra_CV.pdf" class="btn btn-cv-hero">
+                     <i class="fas fa-download"></i> Unduh CV (PDF)
+                  </a>
                   <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
                </div>
             </div>
@@ -42,13 +98,13 @@
                      <span class="dot dot-yellow"></span>
                      <span class="dot dot-green"></span>
                   </div>
-                  <span class="terminal-title">farhan@portfolio:~</span>
+                  <span class="terminal-title">farhan@rsi-karawang:~</span>
                </div>
                <div class="terminal-body" id="terminal-body-container">
                   <div id="terminal-results"></div>
                   <div class="terminal-input-line">
                      <span class="terminal-prompt">guest@portfolio:~$</span>
-                     <input type="text" id="terminal-input-field" autocomplete="off" placeholder="type 'help'..." />
+                     <input type="text" id="terminal-input-field" autocomplete="off" placeholder="type 'help' or 'cv'..." />
                   </div>
                </div>
             </div>
@@ -56,27 +112,27 @@
       </header>
 
       <!-- METRICS & ABOUT SECTION -->
-      <section class="section container-flex">
+      <section id="about" class="section container-flex">
          <div class="about-grid">
             <div class="about-left fade-in">
                <h2 class="section-title">Tentang Saya</h2>
                <p class="about-desc">
-                  Berpengalaman menangani infrastruktur IT rumah sakit, mulai dari troubleshooting harian user, pemeliharaan server & jaringan kritikal, hingga pengembangan aplikasi web internal. Terbiasa bekerja di bawah standar keamanan tinggi dan response time cepat yang menjadi kunci layanan kesehatan berbasis digital.
+                  Berpengalaman menangani ekosistem teknologi informasi rumah sakit yang kritikal dan beroperasi 24 jam. Terbiasa menangani troubleshooting pengguna harian, manajemen server Linux & Windows, konfigurasi keamanan jaringan, monitoring metrik infrastruktur dengan alert otomatis Telegram, hingga membangun aplikasi web terintegrasi end-to-end dari analisis kebutuhan (PRD) sampai implementasi produksi.
                </p>
 
                <!-- Stats Counters -->
                <div class="stats-container">
                   <div class="stat-card">
                      <div class="stat-number" data-target="99.9" data-suffix="%">0%</div>
-                     <div class="stat-label">Server Uptime</div>
+                     <div class="stat-label">Server & SIMRS Uptime</div>
                   </div>
                   <div class="stat-card">
                      <div class="stat-number" data-target="3" data-suffix="+">0</div>
-                     <div class="stat-label">Tahun Pengalaman</div>
+                     <div class="stat-label">Tahun Pengalaman RS</div>
                   </div>
                   <div class="stat-card">
-                     <div class="stat-number" data-target="5" data-suffix="+">0</div>
-                     <div class="stat-label">Sistem Internal Built</div>
+                     <div class="stat-number" data-target="6" data-suffix="+">0</div>
+                     <div class="stat-label">Sistem & App Dibangun</div>
                   </div>
                   <div class="stat-card">
                      <div class="stat-number" data-target="100" data-suffix="+">0</div>
@@ -86,7 +142,7 @@
             </div>
 
             <!-- Interactive Skill Groups -->
-            <div class="about-right fade-in">
+            <div class="about-right fade-in" id="skills">
                <h2 class="section-title">Keahlian Utama</h2>
                <div class="skills-grid">
                   <div class="skill-category-card">
@@ -95,9 +151,21 @@
                         <h3>Server & OS</h3>
                      </div>
                      <ul class="skill-list">
-                        <li>Maintenance Server (Linux / Win)</li>
+                        <li>Maintenance Server (Linux & Windows)</li>
                         <li>Active Directory & User Access</li>
-                        <li>Database Backup & Recovery</li>
+                        <li>Backup & Disaster Recovery Database</li>
+                     </ul>
+                  </div>
+
+                  <div class="skill-category-card">
+                     <div class="skill-header">
+                        <i class="fas fa-chart-line text-primary"></i>
+                        <h3>Monitoring & Alerting</h3>
+                     </div>
+                     <ul class="skill-list">
+                        <li>Grafana & Prometheus Stack</li>
+                        <li>node_exporter & windows_exporter</li>
+                        <li>Automated Telegram Alerting Bot</li>
                      </ul>
                   </div>
 
@@ -108,7 +176,7 @@
                      </div>
                      <ul class="skill-list">
                         <li>LAN/WAN Jaringan Rumah Sakit</li>
-                        <li>Mikrotik & Firewall Config</li>
+                        <li>Mikrotik RouterOS & Firewall</li>
                         <li>Troubleshooting Hardware & PC</li>
                      </ul>
                   </div>
@@ -119,23 +187,102 @@
                         <h3>Web Development</h3>
                      </div>
                      <ul class="skill-list">
-                        <li>HTML5, CSS3, & JavaScript (ES6)</li>
-                        <li>Backend Dev (PHP, Laravel, Node.js)</li>
-                        <li>Database (MySQL, PostgreSQL)</li>
+                        <li>PHP (Native & Laravel), Node.js</li>
+                        <li>HTML5, CSS3, JavaScript ES6</li>
+                        <li>Database (MySQL, MariaDB, PostgreSQL)</li>
                      </ul>
                   </div>
 
-                  <div class="skill-category-card">
+                  <div class="skill-category-card full-width-skill">
                      <div class="skill-header">
                         <i class="fas fa-hospital-user text-primary"></i>
-                        <h3>SIMRS & IT Support</h3>
+                        <h3>SIMRS, Healthcare IT & Metodologi</h3>
                      </div>
-                     <ul class="skill-list">
-                        <li>Helpdesk SIMRS & Integrasi BPJS</li>
-                        <li>Sistem Pelaporan Internal</li>
-                        <li>Response Time Cepat & SLA</li>
+                     <ul class="skill-list horizontal-list">
+                        <li>Operasional & Helpdesk SIMRS 24 Jam</li>
+                        <li>Integrasi Layanan BPJS Kesehatan</li>
+                        <li>Analisis Kebutuhan & Dokumen PRD</li>
+                        <li>Response Time Cepat Sesuai SLA</li>
                      </ul>
                   </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- CAREER & EDUCATION TIMELINE SECTION -->
+      <section id="experience" class="section">
+         <div class="section-header text-center fade-in">
+            <span class="badge">Rekam Jejak Profesional</span>
+            <h2 class="section-title">Pengalaman Kerja & Pendidikan</h2>
+            <p class="section-subtitle">Perjalanan karier di bidang teknologi informasi rumah sakit serta latar belakang akademis yang mendasarinya.</p>
+         </div>
+
+         <div class="timeline-container fade-in">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+               <div class="timeline-badge-icon">
+                  <i class="fas fa-hospital"></i>
+               </div>
+               <div class="timeline-card">
+                  <div class="timeline-header">
+                     <div>
+                        <h3 class="timeline-role">Staff IT</h3>
+                        <h4 class="timeline-company">Rumah Sakit Islam Karawang</h4>
+                     </div>
+                     <span class="timeline-period"><i class="far fa-calendar-alt"></i> 2023 – 2026</span>
+                  </div>
+                  <p class="timeline-summary">
+                     Memegang tanggung jawab operasional dan teknis infrastruktur IT rumah sakit yang beroperasi non-stop:
+                  </p>
+                  <ul class="timeline-details">
+                     <li><strong>Maintenance SIMRS 24 Jam:</strong> Memastikan kelancaran operasional SIMRS dan menangani kendala teknis pengguna (dokter, perawat, kasir, farmasi) dengan respon cepat.</li>
+                     <li><strong>Infrastruktur Server & Jaringan:</strong> Mengelola server Linux dan Windows serta jaringan LAN/WAN rumah sakit agar stabil, aman, dan berintegritas tinggi.</li>
+                     <li><strong>Monitoring Server & Alert Telegram:</strong> Membangun sistem monitoring berbasis Grafana dan Prometheus dengan notifikasi alert otomatis ke Telegram bila terjadi beban abnormal CPU, RAM, disk, atau service down.</li>
+                     <li><strong>Rancang Bangun Sistem Kustom:</strong> Mengembangkan Sistem Laporan Staff, Sistem Mutu Perawat, dan Sistem Penilaian Perawat (paperless).</li>
+                     <li><strong>Website Publik & PRD:</strong> Membangun dan mengelola Website Resmi Rumah Sakit serta menyusun dokumen spesifikasi kebutuhan sistem (PRD).</li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+               <div class="timeline-badge-icon">
+                  <i class="fas fa-university"></i>
+               </div>
+               <div class="timeline-card">
+                  <div class="timeline-header">
+                     <div>
+                        <h3 class="timeline-role">Staff IT (Magang)</h3>
+                        <h4 class="timeline-company">Universitas Buana Perjuangan Karawang</h4>
+                     </div>
+                     <span class="timeline-period"><i class="far fa-calendar-alt"></i> 2021 – 2022</span>
+                  </div>
+                  <ul class="timeline-details">
+                     <li>Mengelola dan memelihara basis data sistem E-Learning kampus untuk mendukung kelancaran perkuliahan mahasiswa.</li>
+                     <li>Melakukan evaluasi berkala terhadap performa dan fungsionalitas sistem pembelajaran online kampus.</li>
+                     <li>Membuat desain grafis untuk mendukung publikasi dan materi visual kegiatan kampus.</li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Timeline Item 3 (Education) -->
+            <div class="timeline-item education-item">
+               <div class="timeline-badge-icon education-badge">
+                  <i class="fas fa-graduation-cap"></i>
+               </div>
+               <div class="timeline-card education-card">
+                  <div class="timeline-header">
+                     <div>
+                        <div class="honors-tag"><i class="fas fa-award"></i> IPK 3.62 / Dengan Pujian (Cum Laude)</div>
+                        <h3 class="timeline-role">S1 Teknik Informatika</h3>
+                        <h4 class="timeline-company">Universitas Buana Perjuangan Karawang</h4>
+                     </div>
+                     <span class="timeline-period"><i class="far fa-calendar-alt"></i> 2018 – 2022</span>
+                  </div>
+                  <p class="timeline-summary">
+                     Lulusan Sarjana Komputer dengan predikat Dengan Pujian. Mempelajari rekayasa perangkat lunak, sistem basis data, arsitektur jaringan komputer, dan algoritma pemecahan masalah.
+                  </p>
                </div>
             </div>
          </div>
@@ -145,14 +292,75 @@
       <section id="projects" class="section bg-light-gradient">
          <div class="section-header text-center fade-in">
             <span class="badge">Portofolio Pekerjaan</span>
-            <h2 class="section-title">Project & Sistem Kustom</h2>
-            <p class="section-subtitle">Sistem web internal dan publik yang dibangun untuk mengotomatisasi proses kerja dan memelihara stabilitas operasional.</p>
+            <h2 class="section-title">Project & Sistem Terpilih</h2>
+            <p class="section-subtitle">Sistem web internal, otomasi infrastruktur monitoring, dan media publik yang dirancang untuk stabilitas operasional serta efisiensi kerja.</p>
          </div>
 
-         <div class="projects-grid fade-in">
-            <article class="card" data-project-id="it-reporting">
+         <!-- Project Filter Tabs -->
+         <div class="project-filters fade-in">
+            <button class="filter-btn active" data-filter="all">
+               <i class="fas fa-layer-group"></i> Semua Project (6)
+            </button>
+            <button class="filter-btn" data-filter="hospital">
+               <i class="fas fa-hospital-alt"></i> SIMRS & Healthcare
+            </button>
+            <button class="filter-btn" data-filter="infra">
+               <i class="fas fa-server"></i> Server & Monitoring
+            </button>
+            <button class="filter-btn" data-filter="web">
+               <i class="fas fa-globe"></i> Web Publik & CMS
+            </button>
+         </div>
+
+         <div class="projects-grid bento-grid fade-in">
+            <!-- Bento 1: Quality System (Featured Large - 2 Cols) -->
+            <article class="card bento-card bento-2col bento-featured" data-category="hospital" data-project-id="hospital-quality-system">
+               <div class="bento-action-corner" title="Buka Detail Sistem">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+               </div>
                <div class="card-img-wrapper">
-                  <img src="assets/pr-1.png" alt="Sistem Pelaporan IT" />
+                  <span class="bento-floating-badge">
+                     <i class="fas fa-star text-accent"></i> Flagship System
+                  </span>
+                  <img src="assets/pr-5.png" alt="Sistem Monitoring Mutu Rumah Sakit" loading="lazy" />
+                  <div class="card-overlay">
+                     <span class="view-detail-btn">Eksplorasi Detail <i class="fas fa-expand-alt"></i></span>
+                  </div>
+               </div>
+               <div class="card-content">
+                  <div class="card-meta">
+                     <span class="project-tag">Hospital Quality System</span>
+                     <span class="status-pill status-internal"><i class="fas fa-shield-alt"></i> Internal RS</span>
+                  </div>
+                  <h3>Sistem Monitoring Mutu Rumah Sakit</h3>
+                  <p>Aplikasi web komprehensif untuk pemantauan, pengukuran, dan analisis 82+ Indikator Mutu Nasional (IMN), IMPRS, serta IKP secara real-time per unit guna kesiapan akreditasi rumah sakit.</p>
+                  
+                  <div class="bento-chips-row">
+                     <span class="bento-chip"><i class="fas fa-chart-pie"></i> 82+ Indikator IMN</span>
+                     <span class="bento-chip"><i class="fas fa-file-excel"></i> Mass Import Excel</span>
+                     <span class="bento-chip"><i class="fas fa-bolt"></i> Audit Trail</span>
+                  </div>
+
+                  <div class="card-tech">
+                     <span>Node.js</span>
+                     <span>Express</span>
+                     <span>Prisma</span>
+                     <span>MariaDB</span>
+                     <span>JWT</span>
+                  </div>
+               </div>
+            </article>
+
+            <!-- Bento 2: IT Reporting (1 Col) -->
+            <article class="card bento-card bento-1col" data-category="hospital" data-project-id="it-reporting">
+               <div class="bento-action-corner" title="Buka Detail Sistem">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+               </div>
+               <div class="card-img-wrapper">
+                  <span class="bento-floating-badge">
+                     <i class="fas fa-clipboard-list text-primary"></i> Operasional IT
+                  </span>
+                  <img src="assets/pr-1.png" alt="Sistem Pelaporan IT" loading="lazy" />
                   <div class="card-overlay">
                      <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
                   </div>
@@ -160,41 +368,107 @@
                <div class="card-content">
                   <div class="card-meta">
                      <span class="project-tag">Internal Web App</span>
+                     <span class="status-pill status-internal"><i class="fas fa-lock"></i> Internal IT</span>
                   </div>
                   <h3>Sistem Pelaporan Internal IT</h3>
-                  <p>Web app internal untuk pencatatan laporan harian IT, lemburan, maintenance server, backup database, dan monitoring aktivitas teknis.</p>
+                  <p>Pencatatan logbook kerja staf IT, monitoring keberhasilan backup SIMRS, dan rekapitulasi kinerja bulanan divisi IT.</p>
+                  
+                  <div class="bento-chips-row">
+                     <span class="bento-chip"><i class="fas fa-clock"></i> Rekap 3 Hari ➔ 15 Mnt</span>
+                     <span class="bento-chip"><i class="fas fa-database"></i> Backup DB Check</span>
+                  </div>
+
                   <div class="card-tech">
                      <span>PHP</span>
                      <span>MySQL</span>
-                     <span>JS</span>
+                     <span>JavaScript</span>
                   </div>
                </div>
             </article>
 
-            <article class="card" data-project-id="hospital-web">
+            <!-- Bento 3: Server Monitoring (Featured Large - 2 Cols) -->
+            <article class="card bento-card bento-2col bento-infra" data-category="infra" data-project-id="server-monitoring">
+               <div class="bento-action-corner" title="Buka Detail Sistem">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+               </div>
                <div class="card-img-wrapper">
-                  <img src="assets/pr-2.png" alt="Website Rumah Sakit" />
+                  <span class="bento-floating-badge">
+                     <i class="fas fa-signal text-accent"></i> Real-time Telemetry
+                  </span>
+                  <img src="assets/pr-monitoring.svg" alt="Sistem Monitoring Server Grafana Prometheus" loading="lazy" />
+                  <div class="card-overlay">
+                     <span class="view-detail-btn">Eksplorasi Detail <i class="fas fa-expand-alt"></i></span>
+                  </div>
+               </div>
+               <div class="card-content">
+                  <div class="card-meta">
+                     <span class="project-tag">Monitoring & DevOps</span>
+                     <span class="status-pill status-live"><i class="fas fa-bolt"></i> Infra Aktif RS</span>
+                  </div>
+                  <h3>Monitoring Server & Alerting Telegram</h3>
+                  <p>Infrastruktur pemantauan node server Linux dan Windows terintegrasi dengan alert otomatis ke Telegram bila terjadi indikasi server down, kapasitas disk kritis, atau kendala database SIMRS.</p>
+                  
+                  <div class="bento-chips-row">
+                     <span class="bento-chip"><i class="fab fa-telegram-plane"></i> Alerting &lt; 10s</span>
+                     <span class="bento-chip"><i class="fas fa-server"></i> Prometheus Exporters</span>
+                     <span class="bento-chip"><i class="fas fa-shield-alt"></i> SLA 99.9% Uptime</span>
+                  </div>
+
+                  <div class="card-tech">
+                     <span>Grafana</span>
+                     <span>Prometheus</span>
+                     <span>node_exporter</span>
+                     <span>windows_exporter</span>
+                     <span>Telegram Bot</span>
+                  </div>
+               </div>
+            </article>
+
+            <!-- Bento 4: Medical KPI (1 Col) -->
+            <article class="card bento-card bento-1col" data-category="hospital" data-project-id="medical-kpi">
+               <div class="bento-action-corner" title="Buka Detail Sistem">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+               </div>
+               <div class="card-img-wrapper">
+                  <span class="bento-floating-badge">
+                     <i class="fas fa-user-nurse text-primary"></i> Evaluasi Klinis
+                  </span>
+                  <img src="assets/pr-4.png" alt="Sistem Penilaian Tenaga Medis" loading="lazy" />
                   <div class="card-overlay">
                      <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
                   </div>
                </div>
                <div class="card-content">
                   <div class="card-meta">
-                     <span class="project-tag">Public Website</span>
+                     <span class="project-tag">Evaluation Tool</span>
+                     <span class="status-pill status-internal"><i class="fas fa-lock"></i> Internal RS</span>
                   </div>
-                  <h3>Website Resmi Rumah Sakit</h3>
-                  <p>Website resmi rumah sakit sebagai media informasi publik: profil, layanan, jadwal dokter, berita, dan kontak.</p>
+                  <h3>Sistem Penilaian & Mutu Perawat</h3>
+                  <p>Sistem evaluasi kinerja dan index performansi (KPI) tenaga keperawatan multi-faktor secara otomatis dan terstandarisasi.</p>
+                  
+                  <div class="bento-chips-row">
+                     <span class="bento-chip"><i class="fas fa-file-pdf"></i> Otomasi PDF/Excel</span>
+                     <span class="bento-chip"><i class="fas fa-leaf"></i> Paperless</span>
+                  </div>
+
                   <div class="card-tech">
-                     <span>Bootstrap</span>
-                     <span>PHP</span>
-                     <span>PostgreSQL</span>
+                     <span>Laravel</span>
+                     <span>MariaDB</span>
+                     <span>Dompdf</span>
                   </div>
                </div>
             </article>
 
-            <article class="card" data-project-id="web-cms">
+            <!-- Bento 5: CMS Admin (1 Col) -->
+            <article class="card bento-card bento-1col" data-category="web" data-project-id="web-cms">
+               <div class="bento-action-corner" title="Buka Detail Sistem">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+               </div>
                <div class="card-img-wrapper">
-                  <img src="assets/pr-3.png" alt="Web App Data Website" />
+                  <span class="bento-floating-badge">
+                     <i class="fas fa-tachometer-alt text-accent"></i> Dashboard Humas
+                  </span>
+                  <img src="assets/pr-3.png" alt="Web App Data Website" loading="lazy" />
                   <div class="card-overlay">
                      <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
                   </div>
@@ -202,9 +476,16 @@
                <div class="card-content">
                   <div class="card-meta">
                      <span class="project-tag">Dashboard / CMS</span>
+                     <span class="status-pill status-internal"><i class="fas fa-lock"></i> Admin Panel</span>
                   </div>
                   <h3>Web App Manajemen Data Website</h3>
-                  <p>Dashboard admin untuk mengelola konten website rumah sakit, statistik pengunjung, pesan user, dan file unduhan.</p>
+                  <p>Dashboard admin CMS untuk pengelolaan konten jadwal dokter, berita kesehatan, dan pemantauan statistik kunjungan website.</p>
+                  
+                  <div class="bento-chips-row">
+                     <span class="bento-chip"><i class="fas fa-chart-line"></i> Chart.js Visual</span>
+                     <span class="bento-chip"><i class="fas fa-users-cog"></i> RBAC Editor</span>
+                  </div>
+
                   <div class="card-tech">
                      <span>PHP</span>
                      <span>MariaDB</span>
@@ -213,46 +494,38 @@
                </div>
             </article>
 
-            <article class="card" data-project-id="medical-kpi">
+            <!-- Bento 6: Hospital Website (Featured Large - 2 Cols) -->
+            <article class="card bento-card bento-2col bento-web" data-category="web" data-project-id="hospital-web">
+               <div class="bento-action-corner" title="Buka Detail Sistem">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+               </div>
                <div class="card-img-wrapper">
-                  <img src="assets/pr-4.png" alt="Sistem Penilaian Tenaga Medis" />
+                  <span class="bento-floating-badge">
+                     <i class="fas fa-globe text-primary"></i> Portal Pasien & Publik
+                  </span>
+                  <img src="assets/pr-2.png" alt="Website Rumah Sakit" loading="lazy" />
                   <div class="card-overlay">
-                     <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
+                     <span class="view-detail-btn">Eksplorasi Detail <i class="fas fa-expand-alt"></i></span>
                   </div>
                </div>
                <div class="card-content">
                   <div class="card-meta">
-                     <span class="project-tag">Evaluation Tool</span>
+                     <span class="project-tag">Public Website</span>
+                     <span class="status-pill status-public"><i class="fas fa-globe"></i> Media Publik RS</span>
                   </div>
-                  <h3>Sistem Penilaian & Pelaporan Tenaga Medis</h3>
-                  <p>Sistem internal untuk penilaian kinerja dan index performance tenaga medis secara bulanan dan tahunan.</p>
-                  <div class="card-tech">
-                     <span>Laravel</span>
-                     <span>MariaDB</span>
-                     <span>JS</span>
+                  <h3>Website Resmi Rumah Sakit</h3>
+                  <p>Platform portal informasi publik rumah sakit yang menyajikan profil layanan kesehatan, fasilitas medis, pencarian jadwal dokter dinamis, dan integrasi pendaftaran via WhatsApp.</p>
+                  
+                  <div class="bento-chips-row">
+                     <span class="bento-chip"><i class="fas fa-calendar-check"></i> Jadwal Dokter Dinamis</span>
+                     <span class="bento-chip"><i class="fab fa-whatsapp"></i> Direct WhatsApp RS</span>
+                     <span class="bento-chip"><i class="fas fa-mobile-alt"></i> Mobile-First</span>
                   </div>
-               </div>
-            </article>
 
-            <article class="card featured" data-project-id="hospital-quality-system">
-               <div class="card-img-wrapper">
-                  <img src="assets/pr-5.png" alt="Sistem Monitoring Mutu Rumah Sakit" />
-                  <div class="card-overlay">
-                     <span class="view-detail-btn">Detail Sistem <i class="fas fa-expand-alt"></i></span>
-                  </div>
-               </div>
-               <div class="card-content">
-                  <div class="card-meta">
-                     <span class="project-tag">Hospital Quality System</span>
-                  </div>
-                  <h3>Sistem Monitoring Mutu Rumah Sakit</h3>
-                  <p>Sistem aplikasi internal untuk pemantauan, pengukuran, dan analisis 82+ Indikator Mutu Nasional (IMN), IMPRS, serta IKP secara real-time per unit/ruangan.</p>
                   <div class="card-tech">
-                     <span>Node.js</span>
-                     <span>Express</span>
-                     <span>Prisma</span>
-                     <span>MariaDB</span>
-                     <span>JWT</span>
+                     <span>Bootstrap 5</span>
+                     <span>PHP</span>
+                     <span>PostgreSQL / MySQL</span>
                   </div>
                </div>
             </article>
@@ -264,11 +537,17 @@
          <div class="contact-card fade-in">
             <div class="contact-header text-center">
                <span class="badge">Hubungi Saya</span>
-               <h2 class="section-title">Mari Berdiskusi</h2>
-               <p class="section-subtitle">Tertarik membangun sistem kustom atau butuh tenaga ahli IT untuk infrastruktur Anda? Hubungi kontak di bawah ini.</p>
+               <h2 class="section-title">Mari Terhubung & Berdiskusi</h2>
+               <p class="section-subtitle">Terbuka untuk peluang kerja sama IT Support, pengelolaan server & infrastruktur rumah sakit, maupun pengembangan sistem web kustom.</p>
             </div>
             
             <div class="contact-content">
+               <div class="contact-location-pill">
+                  <i class="fas fa-map-marker-alt text-accent"></i>
+                  <span>Karawang, Jawa Barat, Indonesia</span>
+               </div>
+
+               <!-- Email Box with Copy Feature -->
                <div class="email-box">
                   <i class="far fa-envelope"></i>
                   <span class="email-text">farhanpoetra011@gmail.com</span>
@@ -278,9 +557,13 @@
                   </button>
                </div>
 
+               <!-- Social & Direct Contact Links -->
                <div class="social-links">
-                  <a href="https://wa.me/628123456789" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp Farhan">
-                     <i class="fab fa-whatsapp"></i> WhatsApp
+                  <a href="https://wa.me/6285174236839?text=Halo%20Farhan,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi." target="_blank" class="social-btn whatsapp" aria-label="WhatsApp Farhan">
+                     <i class="fab fa-whatsapp"></i> WhatsApp (0851-7423-6839)
+                  </a>
+                  <a href="assets/Farhan_Aldiansyah_Poetra_CV.pdf" target="_blank" download="Farhan_Aldiansyah_Poetra_CV.pdf" class="social-btn cv-btn" aria-label="Download CV Farhan">
+                     <i class="fas fa-file-pdf"></i> Download CV (PDF)
                   </a>
                   <a href="https://github.com/farhanaldyy" target="_blank" class="social-btn github" aria-label="GitHub Farhan">
                      <i class="fab fa-github"></i> GitHub
@@ -300,7 +583,7 @@
                <i class="fas fa-times"></i>
             </button>
             <div class="modal-header">
-               <span class="badge">Detail Project</span>
+               <span class="badge" id="modal-category-badge">Detail Project</span>
                <h2 id="modal-title">Judul Project</h2>
             </div>
             <div class="modal-body">
@@ -321,7 +604,7 @@
                   </div>
                   <div class="modal-right">
                      <div class="modal-section highlight-box">
-                        <h4><i class="fas fa-chart-line text-accent"></i> Dampak & Efisiensi RS</h4>
+                        <h4><i class="fas fa-chart-line text-accent"></i> Dampak & Nilai Tambah Operasional</h4>
                         <p id="modal-impact-desc">Dampak bagi rumah sakit...</p>
                      </div>
                      <div class="modal-section">
@@ -339,9 +622,9 @@
       <!-- FOOTER -->
       <footer>
          <p>
-            © 2026 · Farhan Aldiansyah Poetra.
+            © 2026 · <strong>Farhan Aldiansyah Poetra</strong>
             <br />
-            <span>IT Support & Web Development</span>
+            <span>IT Staff · Server & Network · Web Development · Karawang, Indonesia</span>
          </p>
       </footer>
 
